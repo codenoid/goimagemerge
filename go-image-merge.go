@@ -11,6 +11,8 @@ import (
 	"path"
 	"path/filepath"
 	"strings"
+
+	"github.com/disintegration/imaging"
 )
 
 // Specifies how the grid pixel size should be calculated
@@ -31,6 +33,7 @@ type Grid struct {
 	OffsetX         int
 	OffsetY         int
 	Grids           []*Grid
+	Rotate          float64
 }
 
 // MergeImage is the struct that is responsible for merging the given images
@@ -190,6 +193,10 @@ func (m *MergeImage) mergeGrids(images []image.Image) (*image.RGBA, error) {
 			img, err := m.readGridImage(grid)
 			if err != nil {
 				return nil, err
+			}
+
+			if grid.Rotate != 0 {
+				img = imaging.Rotate(img, grid.Rotate, color.Transparent)
 			}
 
 			gridRect := nextGridRect.Bounds().Add(image.Point{grid.OffsetX, grid.OffsetY})
