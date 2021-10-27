@@ -1,9 +1,8 @@
-## gim - Grid Based Image Merge Library
+## gim - Grid Based Image Merge Library (FORK)
+
+[github.com/ozankasikci/go-image-merge](github.com/ozankasikci/go-image-merge)
 
 `gim` is a image merging library that can accept image paths as input, read the image contents, add background color, draw layers on top of each other, merge them into a grid with the desired size.
-
-[![Go Report Card](https://goreportcard.com/badge/github.com/ozankasikci/go-image-merge)](https://goreportcard.com/report/github.com/ozankasikci/go-image-merge)
-[![GoDoc](https://godoc.org/github.com/ozankasikci/go-image-merge?status.svg)](https://godoc.org/github.com/ozankasikci/go-image-merge)
 
 ## Table of Contents
 
@@ -17,15 +16,9 @@
 - [Functional Options](#functional-options)
 - [TODO](#todo)
 
-## Overview
-
-`gim` provides an easy and extensible way to merge images into a flexible grid system.
-
-The main purpose of the library is to help creating image collages programmatically.
-
 ## Installation
 
-`go get -u github.com/ozankasikci/go-image-merge`
+`go get -u github.com/codenoid/goimagemerge`
 
 ## Getting Started
 
